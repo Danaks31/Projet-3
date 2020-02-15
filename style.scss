@@ -1,0 +1,89 @@
+body{
+    width: 1500px;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+.bandeau {
+    background:#579c87;
+    color:#fdcb46;
+    font-size: 3em;
+    vertical-align: middle;
+    &__entete{
+        height:250px;
+        text-align: center;
+        line-height: 250px;
+    }
+    &__pied{
+        height:135px;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 35px;
+        padding-left: 35px;
+    }
+}
+.menus {
+    _border: 1px solid black;
+    width: 1500px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 90px;
+}
+.carte h2{
+    margin-top: 300px;
+    font-size: 1.7em;
+}
+.carte {
+    width: 535px;
+    height:750px;
+    flex-flow: row wrap;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow:4px 4px 4px 4px #f0eded;
+    &__enchante {
+        background:#fcdfdb;
+        margin-left:165px;
+        margin-right:100px;
+        margin-top:100px;
+        font-family: 'Damion', cursive;
+        color:#3c1218;
+    }
+    &__papille {
+        background: #f9f9f9;
+        margin-top: 100px;
+        margin-left:165px;
+        font-family: 'Satisfy', sans-serif;
+        
+    }
+    &__francaise {
+        background:#fff5fe; 
+        margin-top: 100px;
+        font-family: 'Courgette', cursive;
+       
+    }
+     &__gout {
+        background: #fdfffd;
+        margin-top: 100px;
+        margin-left: 100px;
+        font-family: 'Kaushan Script', sans-serif;
+    }
+}
+button {
+    width: 655px;
+    margin-bottom:65px;
+    height: 120px;
+    border-radius:25px;
+    margin-left:422.5px;
+}
+.carte:hover {
+    animation: carte-animations 2s ease-in-out forwards;
+}
+@keyframes carte-animations
+{
+    from{
+        font-size: 1;
+    }
+
+    to{
+        font-size:2em;
+    }
+}
