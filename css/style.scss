@@ -1,0 +1,45 @@
+@import 'utils/variables.scss'; /* liste des couleurs */
+@import 'utils/form.scss'; /* Mise en page */
+@import 'utils/animations.scss'; /* liste des animations */
+
+.degrade { /* Degradé de couleurs pour les cartes */
+    color:transparent;
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    background-clip: text;
+    &__enchante {
+        color:#3c1218;
+        i{
+        color: transparent;
+        -webkit-background-clip: text;
+        -ms-background-clip: text;
+        background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.6, $rouge), color-stop(1, $beige));
+        background-image: gradient(linear, left top, right bottom, color-stop(0.6, $rouge), color-stop(1, $beige));
+        }
+    }
+    &__francaise {
+        background-image: -webkit-gradient( linear, left top, right bottom, color-stop(0.1,$maron), color-stop(1,$violet));
+        background-image: gradient( linear, left top, right bottom, color-stop(0.1, $maron), color-stop(1,$violet));
+        background-image: -ms-gradient( linear, left top, right bottom, color-stop(0.1, $maron), color-stop(1,$violet));
+        & span {
+            color:#d8852e;
+        }
+    }
+    &__papille {
+        background-image: -webkit-gradient( linear, left top, right bottom, color-stop(0.2, $bleufoncer), color-stop(1,$bleuclair));
+        background-image: gradient( linear, left top, right bottom, color-stop(0.2, $bleufoncer), color-stop(1,$bleuclair));
+        background-image: -ms-gradient( linear, left top, right bottom, color-stop(0.2, $bleufoncer), color-stop(1,$bleuclair));
+    }
+    &__gout {
+        background-image: -webkit-gradient( linear, left top, right bottom, color-stop(0.2,$vertfoncer), color-stop(1,$vertclair));
+        background-image: gradient( linear, left top, right bottom, color-stop(0.2, $vertfoncer), color-stop(1,$vertclair));
+        background-image: -ms-gradient( linear, left top, right bottom, color-stop(0.2,$vertfoncer), color-stop(1,$vertclair));
+    }
+}
+.container
+{
+    _border: black solid 1px;
+}
+
+
+

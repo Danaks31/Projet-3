@@ -1,0 +1,89 @@
+body{
+    max-width: 1500px;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Toute les partie sur fond vert */
+
+.bandeau { 
+    background:$vert;
+    color:$jaune;
+    font-size: 3em;
+    display: flex;
+    width: auto;
+    justify-content: space-around;
+    margin: auto;
+    justify-items: center;
+    align-items: center;
+    letter-spacing: -3.5px;
+    &__entete{
+        height:250px;
+        margin-bottom: 100px;
+    }
+    &__pied{
+        height:135px;
+        justify-content: space-between;
+        position: fixed;
+        bottom:0;
+        width: 100%;
+        max-width: 1500px;
+        padding-left: 34px;
+        padding-right: 34px;
+    }
+    &__prochainement{
+        cursor: pointer;
+        width: 43.33%;
+        height: 120px;
+        border-radius: 20px;
+        margin-bottom: 200px;
+        }
+    & a{
+        text-decoration: none;
+        color:$jaune;
+    }
+}
+
+/* mise en page des cartes menus */
+
+.menus {
+    width: auto;
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.carte { 
+    width: 535px;
+    height:750px;
+    justify-items: center;
+    _border: black 1px solid;
+    margin-bottom: 100px;
+    box-shadow: 1px -1px 34px -7px grey;
+    text-decoration: none;
+    & h2{
+        text-align: center;
+        margin-top: 300px;
+        font-size: 2em;
+    }
+    & span {
+        text-transform:uppercase;
+        line-height: 70px;
+    }
+    &__enchante {
+        background:$saumon-enchante;
+        font-family: 'Damion', cursive;
+        color:#3c1218;
+    }
+    &__papille {
+        background:$blanc-papille;
+        font-family: 'Satisfy', sans-serif;
+    }
+    &__francaise {
+        background:$bleu-française; 
+        font-family: 'Courgette', cursive;     
+    }
+     &__gout {
+        background:$blanc-palette;
+        font-family: 'Kaushan Script', sans-serif;
+    }
+}
