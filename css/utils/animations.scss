@@ -1,0 +1,89 @@
+/* animation du footer */
+.jump {
+    display: flex;
+    &__1 {
+    animation: jumping-point 800ms ease-in-out infinite alternate-reverse;
+    }
+    &__2 {
+    animation: jumping-point 800ms 400ms ease-in-out infinite alternate-reverse;
+    }
+    &__3 {
+    animation: jumping-point 800ms 600ms ease-in-out infinite alternate-reverse;
+    }
+}
+.carte:hover {
+    animation: carte-animations 2s ease-in-out forwards;
+}
+footer a{
+    animation: wiggle 500ms 2s infinite ease-in-out forwards;
+}
+@keyframes wiggle  
+{
+    0% , 5%{
+        transform: rotate(-4deg);
+    }
+    20%  , 35%{
+        transform: rotate(4);
+    }
+    
+    100%{
+        text-decoration: none;
+    }
+}
+/* animation zoom */
+@keyframes carte-animations
+{
+    from{
+        font-size: 1em;
+        opacity:1;
+    }
+
+    to{
+        font-size:1.6em;
+        opacity:0.5;
+    }
+}
+/* animation des petits points */
+@keyframes jumping-point
+{
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-15px);
+    }
+}
+.test{
+    border: black solid 1px;
+}
+.test:hover {
+    & > .souligne{
+    transform:scaleX(0.5);
+    }
+}
+.test {
+    &:hover {
+        & + .progress {
+            & > .progress__bar {
+            animation: test 300ms ease-in-out both;
+            }
+        }
+    }
+}
+.progress__bar {
+    background-image: -webkit-gradient(linear, left, right, color-stop(0.3, black), color-stop(1, red));
+    background-image: gradient(linear, left, right, color-stop(0.3, black), color-stop(1, red));
+    height: 10px;
+    position: relative;
+    top: -110px;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+@keyframes test {
+    from{
+        transform: scaleX(0);
+    }
+    to{
+        transform: scaleX(1);
+    }
+}

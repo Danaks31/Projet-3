@@ -1,0 +1,250 @@
+@charset "UTF-8";
+/* liste des couleurs */
+body {
+  max-width: 1500px;
+  margin: auto;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Toute les partie sur fond vert */
+.bandeau {
+  background: #579c87;
+  color: #fdcb46;
+  font-size: 3em;
+  display: flex;
+  width: auto;
+  justify-content: space-around;
+  margin: auto;
+  justify-items: center;
+  align-items: center;
+  letter-spacing: -3.5px;
+}
+.bandeau__entete {
+  height: 250px;
+  margin-bottom: 100px;
+}
+.bandeau__pied {
+  height: 135px;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 1500px;
+  padding-left: 34px;
+  padding-right: 34px;
+}
+.bandeau__prochainement {
+  cursor: pointer;
+  width: 43.33%;
+  height: 120px;
+  border-radius: 20px;
+  margin-bottom: 200px;
+}
+.bandeau a {
+  text-decoration: none;
+  color: #fdcb46;
+}
+
+/* mise en page des cartes menus */
+.menus {
+  width: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.carte {
+  width: 535px;
+  height: 750px;
+  justify-items: center;
+  _border: black 1px solid;
+  margin-bottom: 100px;
+  box-shadow: 1px -1px 34px -7px grey;
+  text-decoration: none;
+}
+.carte h2 {
+  text-align: center;
+  margin-top: 300px;
+  font-size: 2em;
+}
+.carte span {
+  text-transform: uppercase;
+  line-height: 70px;
+}
+.carte__enchante {
+  background: #fcdfdb;
+  font-family: "Damion", cursive;
+  color: #3c1218;
+}
+.carte__papille {
+  background: #f9f9f9;
+  font-family: "Satisfy", sans-serif;
+}
+.carte__francaise {
+  background: #fff5fe;
+  font-family: "Courgette", cursive;
+}
+.carte__gout {
+  background: #fdfffd;
+  font-family: "Kaushan Script", sans-serif;
+}
+
+/* mise en forme despages menus unique */
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 3em;
+}
+
+.menu {
+  width: 1200px;
+  height: 1700px;
+  margin: auto;
+  text-align: justify;
+  box-shadow: 1px -1px 34px -7px grey;
+  padding: 70px 120px 70px 120px;
+  display: block;
+}
+.menu ul {
+  list-style-type: none;
+}
+.menu ul p {
+  text-align: center;
+  font-size: 2em;
+}
+.menu ul li span {
+  text-align: right;
+}
+.menu__enchante {
+  background-color: #fcdfdb;
+  margin-bottom: 200px;
+  font-size: 2em;
+  font-family: "Damion", cursive;
+}
+
+/* Mise en page */
+/* animation du footer */
+.jump {
+  display: flex;
+}
+.jump__1 {
+  animation: jumping-point 800ms ease-in-out infinite alternate-reverse;
+}
+.jump__2 {
+  animation: jumping-point 800ms 400ms ease-in-out infinite alternate-reverse;
+}
+.jump__3 {
+  animation: jumping-point 800ms 600ms ease-in-out infinite alternate-reverse;
+}
+
+.carte:hover {
+  animation: carte-animations 2s ease-in-out forwards;
+}
+
+footer a {
+  animation: wiggle 500ms 2s infinite ease-in-out forwards;
+}
+
+@keyframes wiggle {
+  0%, 5% {
+    transform: rotate(-4deg);
+  }
+  20%, 35% {
+    transform: rotate(4);
+  }
+  100% {
+    text-decoration: none;
+  }
+}
+/* animation zoom */
+@keyframes carte-animations {
+  from {
+    font-size: 1em;
+    opacity: 1;
+  }
+  to {
+    font-size: 1.6em;
+    opacity: 0.5;
+  }
+}
+/* animation des petits points */
+@keyframes jumping-point {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+.test {
+  border: black solid 1px;
+}
+
+.test:hover > .souligne {
+  transform: scaleX(0.5);
+}
+
+.test:hover + .progress > .progress__bar {
+  animation: test 300ms ease-in-out both;
+}
+
+.progress__bar {
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.6, #f04a5e), color-stop(1, #f8a183));
+  background-image: gradient(linear, left top, right bottom, color-stop(0.6, #f04a5e), color-stop(1, #f8a183));
+  height: 10px;
+  position: relative;
+  top: -110px;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+@keyframes test {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+/* liste des animations */
+.degrade {
+  /* Degradé de couleurs pour les cartes */
+  color: transparent;
+  -webkit-background-clip: text;
+  -ms-background-clip: text;
+  background-clip: text;
+}
+.degrade__enchante {
+  color: #3c1218;
+}
+.degrade__enchante i {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.6, #f04a5e), color-stop(1, #f8a183));
+  background-image: gradient(linear, left top, right bottom, color-stop(0.6, #f04a5e), color-stop(1, #f8a183));
+}
+.degrade__francaise {
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.1, #d8852e), color-stop(1, #905bfd));
+  background-image: gradient(linear, left top, right bottom, color-stop(0.1, #d8852e), color-stop(1, #905bfd));
+  background-image: -ms-gradient(linear, left top, right bottom, color-stop(0.1, #d8852e), color-stop(1, #905bfd));
+}
+.degrade__francaise span {
+  color: #d8852e;
+}
+.degrade__papille {
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.2, #0645e5), color-stop(1, #0887fb));
+  background-image: gradient(linear, left top, right bottom, color-stop(0.2, #0645e5), color-stop(1, #0887fb));
+  background-image: -ms-gradient(linear, left top, right bottom, color-stop(0.2, #0645e5), color-stop(1, #0887fb));
+}
+.degrade__gout {
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.2, #4c9f42), color-stop(1, #bfff7e));
+  background-image: gradient(linear, left top, right bottom, color-stop(0.2, #4c9f42), color-stop(1, #bfff7e));
+  background-image: -ms-gradient(linear, left top, right bottom, color-stop(0.2, #4c9f42), color-stop(1, #bfff7e));
+}
+
+.container {
+  border: black solid 1px;
+}
+
+/*# sourceMappingURL=style.css.map */
