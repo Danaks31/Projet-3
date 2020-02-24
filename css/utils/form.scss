@@ -79,13 +79,18 @@ body{
         font-family: 'Satisfy', sans-serif;
     }
     &__francaise {
+<<<<<<< HEAD
         background:$bleu-francaise; 
+=======
+        background:$bleu-française; 
+>>>>>>> 4987122b25fa695f4b3cd9ce506641360fa4af0d
         font-family: 'Courgette', cursive;     
     }
      &__gout {
         background:$blanc-palette;
         font-family: 'Kaushan Script', sans-serif;
     }
+<<<<<<< HEAD
 }
 /* mise en forme despages menus unique */
 h2 {
@@ -122,4 +127,6 @@ h2 {
     &__francaise {
         background:$bleu-francaise;
     }
+=======
+>>>>>>> 4987122b25fa695f4b3cd9ce506641360fa4af0d
 }

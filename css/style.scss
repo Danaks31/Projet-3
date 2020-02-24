@@ -12,7 +12,11 @@
         i{
         color: transparent;
         -webkit-background-clip: text;
+<<<<<<< HEAD
         background-clip: text;
+=======
+        -ms-background-clip: text;
+>>>>>>> 4987122b25fa695f4b3cd9ce506641360fa4af0d
         background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.6, $rouge), color-stop(1, $beige));
         background-image: gradient(linear, left top, right bottom, color-stop(0.6, $rouge), color-stop(1, $beige));
         }
@@ -38,7 +42,11 @@
 }
 .container
 {
+<<<<<<< HEAD
     border: black solid 1px;
+=======
+    _border: black solid 1px;
+>>>>>>> 4987122b25fa695f4b3cd9ce506641360fa4af0d
 }
 
 

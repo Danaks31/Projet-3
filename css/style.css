@@ -89,6 +89,7 @@ body {
   font-family: "Kaushan Script", sans-serif;
 }
 
+<<<<<<< HEAD:css/style.css
 /* mise en forme despages menus unique */
 h2 {
   text-align: center;
@@ -122,6 +123,8 @@ h2 {
   font-family: "Damion", cursive;
 }
 
+=======
+>>>>>>> 4987122b25fa695f4b3cd9ce506641360fa4af0d:style.css
 /* Mise en page */
 /* animation du footer */
 .jump {
@@ -176,6 +179,7 @@ footer a {
     transform: translateY(-15px);
   }
 }
+<<<<<<< HEAD:css/style.css
 .test {
   border: black solid 1px;
 }
@@ -206,6 +210,8 @@ footer a {
     transform: scaleX(1);
   }
 }
+=======
+>>>>>>> 4987122b25fa695f4b3cd9ce506641360fa4af0d:style.css
 /* liste des animations */
 .degrade {
   /* Degradé de couleurs pour les cartes */
@@ -220,7 +226,11 @@ footer a {
 .degrade__enchante i {
   color: transparent;
   -webkit-background-clip: text;
+<<<<<<< HEAD:css/style.css
   background-clip: text;
+=======
+  -ms-background-clip: text;
+>>>>>>> 4987122b25fa695f4b3cd9ce506641360fa4af0d:style.css
   background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.6, #f04a5e), color-stop(1, #f8a183));
   background-image: gradient(linear, left top, right bottom, color-stop(0.6, #f04a5e), color-stop(1, #f8a183));
 }
@@ -244,7 +254,11 @@ footer a {
 }
 
 .container {
+<<<<<<< HEAD:css/style.css
   border: black solid 1px;
+=======
+  _border: black solid 1px;
+>>>>>>> 4987122b25fa695f4b3cd9ce506641360fa4af0d:style.css
 }
 
 /*# sourceMappingURL=style.css.map */
