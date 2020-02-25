@@ -25,13 +25,11 @@ body {
 }
 .bandeau__pied {
   height: 135px;
+  max-width: 1500px;
+  width: 100%;
   justify-content: space-between;
   position: fixed;
   bottom: 0;
-  width: 100%;
-  max-width: 1500px;
-  padding-left: 34px;
-  padding-right: 34px;
 }
 .bandeau__prochainement {
   cursor: pointer;
@@ -89,6 +87,57 @@ body {
   font-family: "Kaushan Script", sans-serif;
 }
 
+/* mise en forme despages menus unique */
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 3em;
+}
+
+.menu {
+  width: 1200px;
+  height: 1700px;
+  box-shadow: 1px -1px 34px -7px grey;
+  padding: 70px 120px 70px 120px;
+  margin: auto;
+}
+.menu ul {
+  list-style-type: none;
+  line-height: 200%;
+}
+.menu__enchante {
+  background-color: #fcdfdb;
+  margin-bottom: 200px;
+  font-size: 2em;
+  font-family: "Damion", cursive;
+}
+.menu__enchante--bas {
+  font-size: 0.5em;
+}
+.menu__francaise {
+  background: #fff5fe;
+}
+.menu span {
+  float: right;
+}
+.menu span p {
+  font-size: 0.5em;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+  line-height: 80%;
+}
+.title .test {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Mise en page */
 /* animation du footer */
 .jump {
@@ -143,6 +192,21 @@ footer a {
     transform: translateY(-15px);
   }
 }
+/* transition pour le soulignement de gauche à droite */
+.test::after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #000;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+  transform-origin: 100% 50%;
+}
+
+.test:hover::after {
+  transform: scaleX(1);
+  transform-origin: 0 50%;
+}
+
 /* liste des animations */
 .degrade {
   /* Degradé de couleurs pour les cartes */
@@ -157,7 +221,7 @@ footer a {
 .degrade__enchante i {
   color: transparent;
   -webkit-background-clip: text;
-  -ms-background-clip: text;
+  background-clip: text;
   background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.6, #f04a5e), color-stop(1, #f8a183));
   background-image: gradient(linear, left top, right bottom, color-stop(0.6, #f04a5e), color-stop(1, #f8a183));
 }
@@ -178,10 +242,6 @@ footer a {
   background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.2, #4c9f42), color-stop(1, #bfff7e));
   background-image: gradient(linear, left top, right bottom, color-stop(0.2, #4c9f42), color-stop(1, #bfff7e));
   background-image: -ms-gradient(linear, left top, right bottom, color-stop(0.2, #4c9f42), color-stop(1, #bfff7e));
-}
-
-.container {
-  _border: black solid 1px;
 }
 
 /*# sourceMappingURL=style.css.map */

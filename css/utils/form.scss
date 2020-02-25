@@ -23,13 +23,11 @@ body{
     }
     &__pied{
         height:135px;
+        max-width:1500px;
+        width: 100%;
         justify-content: space-between;
         position: fixed;
         bottom:0;
-        width: 100%;
-        max-width: 1500px;
-        padding-left: 34px;
-        padding-right: 34px;
     }
     &__prochainement{
         cursor: pointer;
@@ -79,11 +77,59 @@ body{
         font-family: 'Satisfy', sans-serif;
     }
     &__francaise {
-        background:$bleu-française; 
+        background:$bleu-francaise; 
         font-family: 'Courgette', cursive;     
     }
-     &__gout {
+    &__gout {
         background:$blanc-palette;
         font-family: 'Kaushan Script', sans-serif;
+    }
+}
+/* mise en forme despages menus unique */
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 3em;
+}
+.menu {
+    width:1200px;
+    height: 1700px;
+    box-shadow: 1px -1px 34px -7px grey;
+    padding:70px 120px 70px 120px;
+    margin: auto;
+    & ul {
+        list-style-type: none;
+        line-height: 200%;
+    }
+    &__enchante {
+        background-color:$saumon-enchante;
+        margin-bottom: 200px;
+        font-size: 2em;
+        font-family:'Damion', cursive;
+        &--bas {
+            font-size: 0.5em;
+        }
+    }
+    &__francaise {
+        background:$bleu-francaise;
+    }
+    & span {
+    float: right;
+    p {
+        font-size: 0.5em;
+    }
+}
+}
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    line-height: 80%;
+    & .test{
+        position:relative;
+        text-decoration:none;
+        display:inline-block;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

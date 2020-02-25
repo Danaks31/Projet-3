@@ -12,7 +12,7 @@
         i{
         color: transparent;
         -webkit-background-clip: text;
-        -ms-background-clip: text;
+        background-clip: text;
         background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.6, $rouge), color-stop(1, $beige));
         background-image: gradient(linear, left top, right bottom, color-stop(0.6, $rouge), color-stop(1, $beige));
         }
@@ -36,10 +36,7 @@
         background-image: -ms-gradient( linear, left top, right bottom, color-stop(0.2,$vertfoncer), color-stop(1,$vertclair));
     }
 }
-.container
-{
-    _border: black solid 1px;
-}
-
-
-
+// .container
+// {
+//     border: black solid 1px;
+// }
