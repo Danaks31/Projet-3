@@ -1,17 +1,355 @@
-/* Error: expected "{".
- *    ,
- * 17 |         background: -webkit-gradient(linear, left top, right bottom, color-stop(0.6, $rouge), color-stop(1, $beige));
- *    |                                                                                                                     ^
- *    '
- *   css\style.scss 17:117  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a    \2577 \a 17 \2502          background: -webkit-gradient(linear, left top, right bottom, color-stop(0.6, $rouge), color-stop(1, $beige));\d\a    \2502                                                                                                                      ^\a    \2575 \a   css\\style.scss 17:117  root stylesheet';
+@charset "UTF-8";
+/* Couleur globale header/footer */
+/* background des carte et menus */
+/* Couleur des dégradés */
+/* Le chic à la Fr */
+/* La note enchanté */
+/* liste des couleurs */
+body {
+  max-width: 1500px;
+  margin: auto;
+  font-family: "Open Sans", sans-serif;
 }
+
+/* Toute les partie sur fond vert */
+.bandeau {
+  background: #579c87;
+  color: #fdcb46;
+  font-size: 3em;
+  display: flex;
+  width: auto;
+  justify-content: space-around;
+  margin: auto;
+  justify-items: center;
+  align-items: center;
+  -webkit-justify-items: center;
+  -webkit-align-items: center;
+  letter-spacing: -3.5px;
+  overflow: hidden;
+}
+.bandeau__entete {
+  height: 250px;
+  -webkit-height: 250px;
+  margin-bottom: 100px;
+}
+.bandeau__pied {
+  height: 135px;
+  max-width: 1500px;
+  width: 100%;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+}
+.bandeau__prochainement {
+  cursor: pointer;
+  width: 43.33%;
+  height: 120px;
+  border-radius: 20px;
+  margin-bottom: 200px;
+}
+.bandeau a {
+  text-decoration: none;
+  color: #fdcb46;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+/* mise en page des cartes menus */
+.menus {
+  width: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.carte {
+  width: 535px;
+  height: 750px;
+  justify-items: center;
+  margin-bottom: 100px;
+  box-shadow: 1px -1px 34px -7px grey;
+  text-decoration: none;
+}
+.carte h2 {
+  text-align: center;
+  margin-top: 300px;
+  font-size: 2em;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+.carte span {
+  text-transform: uppercase;
+  line-height: 70px;
+}
+.carte__enchante {
+  background: #fcdfdb;
+  font-family: "Damion", cursive;
+}
+.carte__enchante h2 {
+  color: #3d1319;
+}
+.carte__enchante h2 i {
+  color: transparent;
+  -webkit-background-clip: text;
+}
+.carte__papille {
+  background: #edefef;
+  font-family: "Satisfy", sans-serif;
+}
+.carte__francaise {
+  background: #fff5fe;
+  font-family: "Courgette", cursive;
+}
+.carte__gout {
+  background: #fdfffd;
+  font-family: "Kaushan Script", sans-serif;
+}
+
+/* mise en forme des pages menus unique */
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 3em;
+}
+
+.menu {
+  max-width: 1200px;
+  height: auto;
+  box-shadow: 1px -1px 34px -7px grey;
+  margin: auto;
+  font-size: 1.8em;
+  margin-bottom: 200px;
+  padding: 50px 0px 50px 0px;
+}
+.menu h3 {
+  text-align: center;
+  font-size: 0.9em;
+}
+.menu ul {
+  list-style-type: none;
+  line-height: 200%;
+  padding-left: 0;
+  padding: 0px 150px 0px 150px;
+  clear: both;
+}
+.menu__enchante {
+  background-color: #fcdfdb;
+  font-family: "Damion", cursive;
+  color: #3d1319;
+}
+.menu__enchante p i {
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.menu__francaise {
+  background: #fff5fe;
+  font-family: "Courgette", cursive;
+}
+.menu__francaise h2 {
+  color: transparent;
+  -webkit-background-clip: text;
+}
+.menu__francaise .parti__marron {
+  color: #c67412;
+}
+.menu__francaise .parti__rose {
+  color: #a56799;
+}
+.menu__francaise .parti__violette {
+  color: #6e4ccc;
+}
+.menu__papille {
+  background-color: #edefef;
+  font-family: "Satisfy", sans-serif;
+}
+.menu__papille h2 {
+  color: blue;
+}
+.menu__palette {
+  font-family: "Kaushan Script", sans-serif;
+  background-color: #fdfffd;
+}
+.menu__palette h2 {
+  color: transparent;
+  -webkit-background-clip: text;
+}
+.menu span {
+  float: right;
+  font-weight: bold;
+}
+.menu span p {
+  font-size: 0.5em;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.5em;
+  padding: 0px 0px 0px 0px;
+}
+.title .test {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+}
+.title img {
+  vertical-align: middle;
+}
+
+#icon_top {
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+#icon_bot {
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.liseret_gauche {
+  float: left;
+}
+.liseret_droite {
+  float: right;
+}
+
+/* Mise en page */
+/* animation du footer */
+.jump {
+  display: flex;
+}
+.jump__1 {
+  animation: jumping-point 800ms ease-in-out infinite alternate-reverse;
+}
+.jump__2 {
+  animation: jumping-point 800ms 400ms ease-in-out infinite alternate-reverse;
+}
+.jump__3 {
+  animation: jumping-point 800ms 600ms ease-in-out infinite alternate-reverse;
+}
+
+.carte:hover {
+  animation: carte-animations 2s ease-in-out forwards;
+}
+
+footer a {
+  animation: wiggle 2.5s 2s infinite ease-in-out;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(5deg);
+  }
+  90% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* animation zoom */
+@keyframes carte-animations {
+  from {
+    font-size: 1em;
+    opacity: 1;
+  }
+  to {
+    font-size: 1.6em;
+    opacity: 0.5;
+  }
+}
+/* animation des petits points */
+@keyframes jumping-point {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+/* transition pour le soulignement de gauche à droite */
+.test::after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #000;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+  transform-origin: 100% 50%;
+}
+
+.test:hover::after {
+  transform: scaleX(1);
+  transform-origin: 0 50%;
+}
+
+/* liste des animations */
+@media screen and (max-width: 1000px) {
+  /* Menu général ( toutes les pages ) */
+  .menu {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0px;
+    font-size: 1.4em;
+  }
+  .menu h2 {
+    font-size: 2em;
+  }
+  .menu ul {
+    margin: 0;
+    padding: 3%;
+  }
+  .menu span {
+    float: none;
+    display: block;
+  }
+  .menu img {
+    width: 25%;
+  }
+
+  .bandeau {
+    font-size: 2em;
+  }
+  .bandeau__prochainement {
+    font-size: 1.5em;
+    letter-spacing: 0;
+    width: 100%;
+  }
+}
+/* Parti responsive */
+.degrade {
+  /* Degradé de couleurs pour les cartes */
+}
+.degrade__bas {
+  text-align: center;
+  font-size: 2em;
+}
+.degrade__enchante {
+  color: #3c1218;
+}
+.degrade__enchante i {
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0.6, #f04a5e), color-stop(1, #f8a183));
+  background: -ms-gradient(linear, left top, right bottom, color-stop(0.6, #f04a5e), color-stop(1, #f8a183));
+}
+.degrade__francaise {
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0.1, #d8852e), color-stop(1, #905bfd));
+  background: -ms-gradient(linear, left top, right bottom, color-stop(0.1, #d8852e), color-stop(1, #905bfd));
+}
+.degrade__francaise span {
+  color: #d8852e;
+}
+.degrade__papille {
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0.2, #0645e5), color-stop(1, #0887fb));
+  background: -ms-gradient(linear, left top, right bottom, color-stop(0.2, #0645e5), color-stop(1, #0887fb));
+}
+.degrade__gout {
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0.2, #4c9f42), color-stop(1, #bfff7e));
+  background: -ms-gradient(linear, left top, right bottom, color-stop(0.2, #4c9f42), color-stop(1, #bfff7e));
+}
+
+/*# sourceMappingURL=style.css.map */
