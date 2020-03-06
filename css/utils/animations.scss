@@ -15,19 +15,23 @@
     animation: carte-animations 2s ease-in-out forwards;
 }
 footer a{
-    animation: wiggle 500ms 2s infinite ease-in-out forwards;
+    animation: wiggle 2.5s 2s infinite ease-in-out;
 }
-@keyframes wiggle  
-{
-    0% , 5%{
-        transform: rotate(-4deg);
+@keyframes wiggle {
+    0% {
+      transform: rotate(0deg);
     }
-    20%  , 35%{
-        transform: rotate(4);
+    80% {
+      transform: rotate(0deg);
     }
-    
-    100%{
-        text-decoration: none;
+    85% {
+      transform: rotate(5deg);
+    }
+    90% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(0deg);
     }
 }
 /* animation zoom */

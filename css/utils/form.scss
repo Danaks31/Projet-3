@@ -16,9 +16,13 @@ body{
     margin: auto;
     justify-items: center;
     align-items: center;
+    -webkit-justify-items: center;
+    -webkit-align-items: center;
     letter-spacing: -3.5px;
+    overflow: hidden;
     &__entete{
         height:250px;
+        -webkit-height:250px;
         margin-bottom: 100px;
     }
     &__pied{
@@ -39,6 +43,8 @@ body{
     & a{
         text-decoration: none;
         color:$jaune;
+        padding-left: 35px;
+        padding-right: 35px;
     }
 }
 
@@ -54,14 +60,15 @@ body{
     width: 535px;
     height:750px;
     justify-items: center;
-    _border: black 1px solid;
     margin-bottom: 100px;
-    box-shadow: 1px -1px 34px -7px grey;
+    box-shadow: 1px -1px 34px -7px #ededed;
     text-decoration: none;
     & h2{
         text-align: center;
         margin-top: 300px;
         font-size: 2em;
+        color: transparent;
+        -webkit-background-clip: text;
     }
     & span {
         text-transform:uppercase;
@@ -70,7 +77,13 @@ body{
     &__enchante {
         background:$saumon-enchante;
         font-family: 'Damion', cursive;
-        color:#3c1218;
+        & h2 {
+            color:$marron-menu;
+            & i {
+                color: transparent;
+                -webkit-background-clip: text;
+            }
+        }
     }
     &__papille {
         background:$blanc-papille;
@@ -85,51 +98,109 @@ body{
         font-family: 'Kaushan Script', sans-serif;
     }
 }
-/* mise en forme despages menus unique */
+/* mise en forme des pages menus unique */
 h2 {
     text-align: center;
     margin-bottom: 40px;
     font-size: 3em;
 }
 .menu {
-    width:1200px;
-    height: 1700px;
+    max-width:1200px;
+    height: auto;
     box-shadow: 1px -1px 34px -7px grey;
-    padding:70px 120px 70px 120px;
     margin: auto;
+    font-size: 1.8em;
+    margin-bottom: 200px;
+    padding: 50px 0px 50px 0px;
+    & h3 {
+        text-align: center;
+        font-size: 0.9em;
+    }
     & ul {
         list-style-type: none;
         line-height: 200%;
+        padding-left: 0;
+        padding: 0px 150px 0px 150px;
+        clear: both;      
     }
     &__enchante {
         background-color:$saumon-enchante;
-        margin-bottom: 200px;
-        font-size: 2em;
         font-family:'Damion', cursive;
-        &--bas {
-            font-size: 0.5em;
+        color:$marron-menu;
+        & p i {
+            -webkit-background-clip: text;
+            color: transparent;
         }
+
     }
     &__francaise {
         background:$bleu-francaise;
+        font-family: 'Courgette', cursive;
+        & h2 {
+            color: transparent;
+            -webkit-background-clip: text;
+        }
+        & .parti{
+            &__marron{
+                color:$parti-marron;
+            }
+            &__rose{
+                color:$parti-rose;
+            }
+            &__violette{
+                color:$parti-violette;
+            }
+        }
+    }
+    &__papille {
+        background-color:$blanc-papille;
+        font-family: 'Satisfy', sans-serif;
+        & h2 {
+            color: blue;
+        }
+    }
+    &__palette {
+        font-family: 'Kaushan Script', sans-serif;
+        background-color: $blanc-palette;
+        & h2 {
+            color: transparent;
+            -webkit-background-clip: text;
+        }
     }
     & span {
     float: right;
+    font-weight: bold;
     p {
         font-size: 0.5em;
     }
-}
+    }
 }
 .title {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     font-size: 1.5em;
-    line-height: 80%;
+    padding: 0px 0px 0px 0px;
     & .test{
         position:relative;
         text-decoration:none;
         display:inline-block;
-        margin-left: auto;
-        margin-right: auto;
+    }
+    & img {
+        vertical-align: middle;
+    }
+}
+#icon_top{
+    color: transparent;
+    -webkit-background-clip: text;
+}
+#icon_bot{
+    color: transparent;
+    -webkit-background-clip: text;
+}
+.liseret {
+    &_gauche{
+    float:left;
+    }
+    &_droite{
+    float:right;
     }
 }

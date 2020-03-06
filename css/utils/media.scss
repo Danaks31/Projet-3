@@ -1,0 +1,34 @@
+@media screen and (max-width: 1000px){
+/* Menu général ( toutes les pages ) */
+.menu {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    padding:0px;
+    font-size:1.4em;
+    & h2 {
+        font-size: 2em;
+    }
+    & ul {
+        margin:0;
+        padding: 3%;
+    }
+    & span {
+        float: none;
+        display: block;
+    }
+    & img {
+        width: 10%;
+        height: 200px;
+    }
+}
+.bandeau{
+    font-size: 2em;
+    &__prochainement{
+        font-size: 1.5em;
+        letter-spacing: 0;
+        width: 100%;
+    }
+
+}
+}
