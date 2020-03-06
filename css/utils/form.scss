@@ -90,21 +90,36 @@ body{
         font-family: 'Satisfy', sans-serif;
     }
     &__francaise {
+<<<<<<< HEAD
         background:$bleu-francaise; 
+=======
+<<<<<<< HEAD
+        background:$bleu-francaise; 
+=======
+        background:$bleu-française; 
+>>>>>>> 4987122b25fa695f4b3cd9ce506641360fa4af0d
+>>>>>>> 56242a2c563f99d316a90910b04ef1ca1ea80f8a
         font-family: 'Courgette', cursive;     
     }
     &__gout {
         background:$blanc-palette;
         font-family: 'Kaushan Script', sans-serif;
     }
+<<<<<<< HEAD
 }
 /* mise en forme des pages menus unique */
+=======
+<<<<<<< HEAD
+}
+/* mise en forme despages menus unique */
+>>>>>>> 56242a2c563f99d316a90910b04ef1ca1ea80f8a
 h2 {
     text-align: center;
     margin-bottom: 40px;
     font-size: 3em;
 }
 .menu {
+<<<<<<< HEAD
     max-width:1200px;
     height: auto;
     box-shadow: 1px -1px 34px -7px grey;
@@ -203,4 +218,36 @@ h2 {
     &_droite{
     float:right;
     }
+=======
+    width:1200px;
+    height: 1700px;
+    margin: auto;
+    text-align: justify;
+    box-shadow: 1px -1px 34px -7px grey;
+    padding:70px 120px 70px 120px;;
+    display: block;
+    & ul {
+        list-style-type: none;
+        & p {
+            text-align: center;
+            font-size: 2em;
+        }
+    & li {
+        & span {
+            text-align: right;
+        }
+    }
+    }
+    &__enchante {
+        background-color:$saumon-enchante;
+        margin-bottom: 200px;
+        font-size: 2em;
+        font-family:'Damion', cursive;
+    }
+    &__francaise {
+        background:$bleu-francaise;
+    }
+=======
+>>>>>>> 4987122b25fa695f4b3cd9ce506641360fa4af0d
+>>>>>>> 56242a2c563f99d316a90910b04ef1ca1ea80f8a
 }
