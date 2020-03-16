@@ -22,18 +22,14 @@ body {
   margin: auto;
   justify-items: center;
   align-items: center;
-  -webkit-justify-items: center;
-  -webkit-align-items: center;
   letter-spacing: -3.5px;
-  overflow: hidden;
 }
 .bandeau__entete {
-  height: 250px;
-  -webkit-height: 250px;
+  height: 125px;
   margin-bottom: 100px;
 }
 .bandeau__pied {
-  height: 135px;
+  height: 90px;
   max-width: 1500px;
   width: 100%;
   justify-content: space-between;
@@ -62,17 +58,19 @@ body {
   flex-wrap: wrap;
 }
 
+/* Dimenssions générale de chaque carte de la page index */
 .carte {
   width: 535px;
   height: 750px;
-  justify-items: center;
   margin-bottom: 100px;
   box-shadow: 1px -1px 34px -7px grey;
+  -webkit-box-shadow: 1px -1px 34px -7px grey;
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .carte h2 {
-  text-align: center;
-  margin-top: 300px;
   font-size: 2em;
   color: transparent;
   -webkit-background-clip: text;
@@ -80,10 +78,11 @@ body {
 .carte span {
   text-transform: uppercase;
   line-height: 70px;
+  font-family: "Tillana";
 }
 .carte__enchante {
   background: #fcdfdb;
-  font-family: "Damion", cursive;
+  font-family: "Devonshire";
 }
 .carte__enchante h2 {
   color: #3d1319;
@@ -98,7 +97,7 @@ body {
 }
 .carte__francaise {
   background: #fff5fe;
-  font-family: "Courgette", cursive;
+  font-family: "Libre Baskerville";
 }
 .carte__gout {
   background: #fdfffd;
@@ -113,7 +112,8 @@ h2 {
 }
 
 .menu {
-  max-width: 1200px;
+  /* Dimenssion générale des menu */
+  width: 85%;
   height: auto;
   box-shadow: 1px -1px 34px -7px grey;
   margin: auto;
@@ -121,20 +121,23 @@ h2 {
   margin-bottom: 200px;
   padding: 50px 0px 50px 0px;
 }
+.menu h2 {
+  font-size: 2em;
+}
 .menu h3 {
   text-align: center;
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 .menu ul {
   list-style-type: none;
   line-height: 200%;
   padding-left: 0;
-  padding: 0px 150px 0px 150px;
+  padding: 0px 110px 0px 110px;
   clear: both;
 }
 .menu__enchante {
   background-color: #fcdfdb;
-  font-family: "Damion", cursive;
+  font-family: "Devonshire";
   color: #3d1319;
 }
 .menu__enchante p i {
@@ -143,7 +146,7 @@ h2 {
 }
 .menu__francaise {
   background: #fff5fe;
-  font-family: "Courgette", cursive;
+  font-family: "Libre Baskerville";
 }
 .menu__francaise h2 {
   color: transparent;
@@ -170,6 +173,7 @@ h2 {
   background-color: #fdfffd;
 }
 .menu__palette h2 {
+  /* Rend le texte transparent pour y attribué la couleur du background, ici pour les dégradés */
   color: transparent;
   -webkit-background-clip: text;
 }
@@ -182,9 +186,12 @@ h2 {
 }
 
 .title {
-  text-align: center;
   font-size: 1.5em;
   padding: 0px 0px 0px 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  clear: both;
 }
 .title .test {
   position: relative;
@@ -192,7 +199,8 @@ h2 {
   display: inline-block;
 }
 .title img {
-  vertical-align: middle;
+  overflow: hidden;
+  width: 25%;
 }
 
 #icon_top {
@@ -205,14 +213,37 @@ h2 {
   -webkit-background-clip: text;
 }
 
-.liseret_gauche {
-  float: left;
+.degrade {
+  /* Degradé de couleurs pour les cartes */
 }
-.liseret_droite {
-  float: right;
+.degrade__bas {
+  text-align: center;
+  font-size: 2em;
+}
+.degrade__enchante {
+  color: #3c1218;
+}
+.degrade__enchante i {
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0.6, #f04a5e), color-stop(1, #f8a183));
+  background: -ms-gradient(linear, left top, right bottom, color-stop(0.6, #f04a5e), color-stop(1, #f8a183));
+}
+.degrade__francaise {
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0.1, #d8852e), color-stop(1, #905bfd));
+  background: -ms-gradient(linear, left top, right bottom, color-stop(0.1, #d8852e), color-stop(1, #905bfd));
+}
+.degrade__francaise span {
+  color: #d8852e;
+}
+.degrade__papille {
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0.2, #0645e5), color-stop(1, #0887fb));
+  background: -ms-gradient(linear, left top, right bottom, color-stop(0.2, #0645e5), color-stop(1, #0887fb));
+}
+.degrade__gout {
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0.2, #4c9f42), color-stop(1, #bfff7e));
+  background: -ms-gradient(linear, left top, right bottom, color-stop(0.2, #4c9f42), color-stop(1, #bfff7e));
 }
 
-/* Mise en page */
+/* Mise en page, attribution des couleurs */
 /* animation du footer */
 .jump {
   display: flex;
@@ -276,7 +307,7 @@ footer a {
 .test::after {
   display: block;
   content: "";
-  border-bottom: solid 3px #000;
+  border-bottom: solid 3px;
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
   transform-origin: 100% 50%;
@@ -289,13 +320,14 @@ footer a {
 
 /* liste des animations */
 @media screen and (max-width: 1000px) {
-  /* Menu général ( toutes les pages ) */
+  /* Menu général ( toutes les pages en dessous de 1000px de large ) */
   .menu {
     text-align: center;
     justify-content: center;
-    width: 100%;
+    width: 85%;
     padding: 0px;
     font-size: 1.4em;
+    margin-bottom: 120px;
   }
   .menu h2 {
     font-size: 2em;
@@ -303,54 +335,44 @@ footer a {
   .menu ul {
     margin: 0;
     padding: 3%;
+    line-height: 100%;
+  }
+  .menu li {
+    margin-bottom: 20px;
   }
   .menu span {
     float: none;
     display: block;
   }
   .menu img {
-    width: 10%;
-    height: 200px;
+    overflow: hidden;
+    margin: 10px 10px 10px 10px;
+  }
+
+  .carte {
+    width: 90%;
+    height: 330px;
+    margin-bottom: 30px;
   }
 
   .bandeau {
+    height: 100px;
     font-size: 2em;
   }
   .bandeau__prochainement {
-    font-size: 1.5em;
+    font-size: 2em;
     letter-spacing: 0;
-    width: 100%;
+    width: 85%;
+    margin-bottom: 130px;
+  }
+  .bandeau__entete {
+    margin-bottom: 20px;
+  }
+  .bandeau__pied {
+    font-size: 1.4em;
+    letter-spacing: normal;
   }
 }
 /* Parti responsive */
-.degrade {
-  /* Degradé de couleurs pour les cartes */
-}
-.degrade__bas {
-  text-align: center;
-  font-size: 2em;
-}
-.degrade__enchante {
-  color: #3c1218;
-}
-.degrade__enchante i {
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0.6, #f04a5e), color-stop(1, #f8a183));
-  background: -ms-gradient(linear, left top, right bottom, color-stop(0.6, #f04a5e), color-stop(1, #f8a183));
-}
-.degrade__francaise {
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0.1, #d8852e), color-stop(1, #905bfd));
-  background: -ms-gradient(linear, left top, right bottom, color-stop(0.1, #d8852e), color-stop(1, #905bfd));
-}
-.degrade__francaise span {
-  color: #d8852e;
-}
-.degrade__papille {
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0.2, #0645e5), color-stop(1, #0887fb));
-  background: -ms-gradient(linear, left top, right bottom, color-stop(0.2, #0645e5), color-stop(1, #0887fb));
-}
-.degrade__gout {
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0.2, #4c9f42), color-stop(1, #bfff7e));
-  background: -ms-gradient(linear, left top, right bottom, color-stop(0.2, #4c9f42), color-stop(1, #bfff7e));
-}
 
 /*# sourceMappingURL=style.css.map */

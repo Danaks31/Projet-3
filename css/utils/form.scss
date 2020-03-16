@@ -16,17 +16,13 @@ body{
     margin: auto;
     justify-items: center;
     align-items: center;
-    -webkit-justify-items: center;
-    -webkit-align-items: center;
     letter-spacing: -3.5px;
-    overflow: hidden;
     &__entete{
-        height:250px;
-        -webkit-height:250px;
+        height:125px;
         margin-bottom: 100px;
     }
     &__pied{
-        height:135px;
+        height:90px;
         max-width:1500px;
         width: 100%;
         justify-content: space-between;
@@ -56,16 +52,18 @@ body{
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+/* Dimenssions générale de chaque carte de la page index */
 .carte { 
     width: 535px;
     height:750px;
-    justify-items: center;
     margin-bottom: 100px;
     box-shadow: 1px -1px 34px -7px grey;
+    -webkit-box-shadow:1px -1px 34px -7px grey;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     & h2{
-        text-align: center;
-        margin-top: 300px;
         font-size: 2em;
         color: transparent;
         -webkit-background-clip: text;
@@ -73,10 +71,11 @@ body{
     & span {
         text-transform:uppercase;
         line-height: 70px;
+        font-family:'Tillana';
     }
     &__enchante {
         background:$saumon-enchante;
-        font-family: 'Damion', cursive;
+        font-family: 'Devonshire';
         & h2 {
             color:$marron-menu;
             & i {
@@ -91,7 +90,7 @@ body{
     }
     &__francaise {
         background:$bleu-francaise; 
-        font-family: 'Courgette', cursive;     
+        font-family: 'Libre Baskerville';     
     }
     &__gout {
         background:$blanc-palette;
@@ -104,28 +103,31 @@ h2 {
     margin-bottom: 40px;
     font-size: 3em;
 }
-.menu {
-    max-width:1200px;
+.menu { /* Dimenssion générale des menu */
+    width: 85%;
     height: auto;
     box-shadow: 1px -1px 34px -7px grey;
     margin: auto;
     font-size: 1.8em;
     margin-bottom: 200px;
     padding: 50px 0px 50px 0px;
+    & h2 {
+        font-size: 2em;
+    }
     & h3 {
         text-align: center;
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
     & ul {
         list-style-type: none;
         line-height: 200%;
         padding-left: 0;
-        padding: 0px 150px 0px 150px;
+        padding: 0px 110px 0px 110px;
         clear: both;      
     }
     &__enchante {
         background-color:$saumon-enchante;
-        font-family:'Damion', cursive;
+        font-family:'Devonshire';
         color:$marron-menu;
         & p i {
             -webkit-background-clip: text;
@@ -135,7 +137,7 @@ h2 {
     }
     &__francaise {
         background:$bleu-francaise;
-        font-family: 'Courgette', cursive;
+        font-family: 'Libre Baskerville';
         & h2 {
             color: transparent;
             -webkit-background-clip: text;
@@ -162,7 +164,7 @@ h2 {
     &__palette {
         font-family: 'Kaushan Script', sans-serif;
         background-color: $blanc-palette;
-        & h2 {
+        & h2 { /* Rend le texte transparent pour y attribué la couleur du background, ici pour les dégradés */
             color: transparent;
             -webkit-background-clip: text;
         }
@@ -176,16 +178,20 @@ h2 {
     }
 }
 .title {
-    text-align: center;
     font-size: 1.5em;
     padding: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    clear: both;
     & .test{
         position:relative;
         text-decoration:none;
         display:inline-block;
     }
     & img {
-        vertical-align: middle;
+        overflow: hidden;
+        width: 25%;
     }
 }
 #icon_top{
@@ -196,11 +202,32 @@ h2 {
     color: transparent;
     -webkit-background-clip: text;
 }
-.liseret {
-    &_gauche{
-    float:left;
+
+.degrade { /* Degradé de couleurs pour les cartes */
+    &__bas {
+        text-align: center;
+        font-size: 2em;
     }
-    &_droite{
-    float:right;
+    &__enchante {
+        color:#3c1218;
+        i{
+        background: -webkit-gradient(linear, left top, right bottom, color-stop(0.6, $rouge), color-stop(1, $beige));
+        background: -ms-gradient(linear, left top, right bottom, color-stop(0.6, $rouge), color-stop(1, $beige));
+        }
+    }
+    &__francaise {
+        background: -webkit-gradient( linear, left top, right bottom, color-stop(0.1,$maron), color-stop(1,$violet));
+        background: -ms-gradient( linear, left top, right bottom, color-stop(0.1, $maron), color-stop(1,$violet));
+        & span {
+            color:#d8852e;
+        }
+    }
+    &__papille {
+        background: -webkit-gradient( linear, left top, right bottom, color-stop(0.2, $bleu-foncer), color-stop(1,$bleuclair));
+        background: -ms-gradient( linear, left top, right bottom, color-stop(0.2, $bleu-foncer), color-stop(1,$bleuclair));
+    }
+    &__gout {
+        background: -webkit-gradient( linear, left top, right bottom, color-stop(0.2,$vertfoncer), color-stop(1,$vertclair));
+        background: -ms-gradient( linear, left top, right bottom, color-stop(0.2,$vertfoncer), color-stop(1,$vertclair));
     }
 }

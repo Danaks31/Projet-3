@@ -1,35 +1,4 @@
 @import 'utils/variables.scss'; /* liste des couleurs */
-@import 'utils/form.scss'; /* Mise en page */
+@import 'utils/form.scss'; /* Mise en page, attribution des couleurs */
 @import 'utils/animations.scss'; /* liste des animations */
 @import 'utils/media.scss'; /* Parti responsive */
-
-
-
-.degrade { /* Degradé de couleurs pour les cartes */
-    &__bas {
-        text-align: center;
-        font-size: 2em;
-    }
-    &__enchante {
-        color:#3c1218;
-        i{
-        background: -webkit-gradient(linear, left top, right bottom, color-stop(0.6, $rouge), color-stop(1, $beige));
-        background: -ms-gradient(linear, left top, right bottom, color-stop(0.6, $rouge), color-stop(1, $beige));
-        }
-    }
-    &__francaise {
-        background: -webkit-gradient( linear, left top, right bottom, color-stop(0.1,$maron), color-stop(1,$violet));
-        background: -ms-gradient( linear, left top, right bottom, color-stop(0.1, $maron), color-stop(1,$violet));
-        & span {
-            color:#d8852e;
-        }
-    }
-    &__papille {
-        background: -webkit-gradient( linear, left top, right bottom, color-stop(0.2, $bleu-foncer), color-stop(1,$bleuclair));
-        background: -ms-gradient( linear, left top, right bottom, color-stop(0.2, $bleu-foncer), color-stop(1,$bleuclair));
-    }
-    &__gout {
-        background: -webkit-gradient( linear, left top, right bottom, color-stop(0.2,$vertfoncer), color-stop(1,$vertclair));
-        background: -ms-gradient( linear, left top, right bottom, color-stop(0.2,$vertfoncer), color-stop(1,$vertclair));
-    }
-}
