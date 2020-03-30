@@ -5,13 +5,22 @@
 /* Le chic à la Fr */
 /* La note enchanté */
 /* liste des couleurs */
+/*
+Mise en page globale
+Font-Size/Family
+*/
+/*=========================
+Dimension du corp du site 
+=========================*/
 body {
   max-width: 1500px;
   margin: auto;
   font-family: "Open Sans", sans-serif;
 }
 
-/* Toute les partie sur fond vert */
+/*=============================
+Header/Footer et Prochainement
+=============================*/
 .bandeau {
   background: #579c87;
   color: #fdcb46;
@@ -58,7 +67,9 @@ body {
   flex-wrap: wrap;
 }
 
-/* Dimenssions générale de chaque carte de la page index */
+/*=================================================== 
+Dimension générale de chaque carte de la page index 
+====================================================*/
 .carte {
   width: 535px;
   height: 750px;
@@ -104,7 +115,9 @@ body {
   font-family: "Kaushan Script", sans-serif;
 }
 
-/* mise en forme des pages menus unique */
+/*==========================
+Mise des page menus unique 
+==========================*/
 h2 {
   text-align: center;
   margin-bottom: 40px;
@@ -213,9 +226,9 @@ h2 {
   -webkit-background-clip: text;
 }
 
-.degrade {
-  /* Degradé de couleurs pour les cartes */
-}
+/*================================= 
+Degradé de couleurs pour les cartes 
+=================================*/
 .degrade__bas {
   text-align: center;
   font-size: 2em;
@@ -244,24 +257,15 @@ h2 {
 }
 
 /* Mise en page, attribution des couleurs */
-/* animation du footer */
-.jump {
-  display: flex;
-}
-.jump__1 {
-  animation: jumping-point 800ms ease-in-out infinite alternate-reverse;
-}
-.jump__2 {
-  animation: jumping-point 800ms 400ms ease-in-out infinite alternate-reverse;
-}
-.jump__3 {
-  animation: jumping-point 800ms 600ms ease-in-out infinite alternate-reverse;
-}
-
-.carte:hover {
-  animation: carte-animations 2s ease-in-out forwards;
-}
-
+/* 
+Animation Wiggle footer
+Animation zoom carte
+Animation des jumping point
+Animation des soulignements
+*/
+/*======================= 
+Animation Wiggle du footer 
+========================*/
 footer a {
   animation: wiggle 2.5s 2s infinite ease-in-out;
 }
@@ -283,7 +287,13 @@ footer a {
     transform: rotate(0deg);
   }
 }
-/* animation zoom */
+/*=============
+animation zoom 
+=============*/
+.carte:hover {
+  animation: carte-animations 2s ease-in-out forwards;
+}
+
 @keyframes carte-animations {
   from {
     font-size: 1em;
@@ -294,7 +304,22 @@ footer a {
     opacity: 0.5;
   }
 }
-/* animation des petits points */
+/*================== 
+Animation des points 
+===================*/
+.jump {
+  display: flex;
+}
+.jump__1 {
+  animation: jumping-point 800ms ease-in-out infinite alternate-reverse;
+}
+.jump__2 {
+  animation: jumping-point 800ms 400ms ease-in-out infinite alternate-reverse;
+}
+.jump__3 {
+  animation: jumping-point 800ms 600ms ease-in-out infinite alternate-reverse;
+}
+
 @keyframes jumping-point {
   from {
     transform: translateY(0px);
@@ -303,7 +328,9 @@ footer a {
     transform: translateY(-15px);
   }
 }
-/* transition pour le soulignement de gauche à droite */
+/*========================= 
+Animation des soulignements 
+=========================*/
 .test::after {
   display: block;
   content: "";

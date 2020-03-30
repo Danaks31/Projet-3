@@ -1,19 +1,14 @@
-/* animation du footer */
-.jump {
-    display: flex;
-    &__1 {
-    animation: jumping-point 800ms ease-in-out infinite alternate-reverse;
-    }
-    &__2 {
-    animation: jumping-point 800ms 400ms ease-in-out infinite alternate-reverse;
-    }
-    &__3 {
-    animation: jumping-point 800ms 600ms ease-in-out infinite alternate-reverse;
-    }
-}
-.carte:hover {
-    animation: carte-animations 2s ease-in-out forwards;
-}
+/* 
+Animation Wiggle footer
+Animation zoom carte
+Animation des jumping point
+Animation des soulignements
+*/
+
+/*======================= 
+Animation Wiggle du footer 
+========================*/
+
 footer a{
     animation: wiggle 2.5s 2s infinite ease-in-out;
 }
@@ -34,7 +29,14 @@ footer a{
         transform: rotate(0deg);
     }
 }
-/* animation zoom */
+/*=============
+animation zoom 
+=============*/
+
+.carte:hover {
+    animation: carte-animations 2s ease-in-out forwards;
+}
+
 @keyframes carte-animations
 {
     from{
@@ -47,7 +49,23 @@ footer a{
         opacity:0.5;
     }
 }
-/* animation des petits points */
+/*================== 
+Animation des points 
+===================*/
+
+.jump {
+    display: flex;
+    &__1 {
+    animation: jumping-point 800ms ease-in-out infinite alternate-reverse;
+    }
+    &__2 {
+    animation: jumping-point 800ms 400ms ease-in-out infinite alternate-reverse;
+    }
+    &__3 {
+    animation: jumping-point 800ms 600ms ease-in-out infinite alternate-reverse;
+    }
+}
+
 @keyframes jumping-point
 {
     from {
@@ -57,7 +75,10 @@ footer a{
         transform: translateY(-15px);
     }
 }
-/* transition pour le soulignement de gauche à droite */
+/*========================= 
+Animation des soulignements 
+=========================*/
+
 .test::after {
     display:block;
     content: '';

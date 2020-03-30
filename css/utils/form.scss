@@ -1,10 +1,22 @@
+/*
+Mise en page globale
+Font-Size/Family
+*/
+
+
+
+/*=========================
+Dimension du corp du site 
+=========================*/
 body{
     max-width: 1500px;
     margin: auto;
     font-family: 'Open Sans', sans-serif;
 }
 
-/* Toute les partie sur fond vert */
+/*=============================
+Header/Footer et Prochainement
+=============================*/
 
 .bandeau { 
     background:$vert;
@@ -52,7 +64,9 @@ body{
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
-/* Dimenssions générale de chaque carte de la page index */
+/*=================================================== 
+Dimension générale de chaque carte de la page index 
+====================================================*/
 .carte { 
     width: 535px;
     height:750px;
@@ -97,7 +111,9 @@ body{
         font-family: 'Kaushan Script', sans-serif;
     }
 }
-/* mise en forme des pages menus unique */
+/*==========================
+Mise des page menus unique 
+==========================*/
 h2 {
     text-align: center;
     margin-bottom: 40px;
@@ -203,7 +219,11 @@ h2 {
     -webkit-background-clip: text;
 }
 
-.degrade { /* Degradé de couleurs pour les cartes */
+/*================================= 
+Degradé de couleurs pour les cartes 
+=================================*/
+
+.degrade { 
     &__bas {
         text-align: center;
         font-size: 2em;
@@ -223,11 +243,11 @@ h2 {
         }
     }
     &__papille {
-        background: -webkit-gradient( linear, left top, right bottom, color-stop(0.2, $bleu-foncer), color-stop(1,$bleuclair));
-        background: -ms-gradient( linear, left top, right bottom, color-stop(0.2, $bleu-foncer), color-stop(1,$bleuclair));
+        background: -webkit-gradient( linear, left top, right bottom, color-stop(0.2, $bleu-foncer), color-stop(1,$bleu-clair));
+        background: -ms-gradient( linear, left top, right bottom, color-stop(0.2, $bleu-foncer), color-stop(1,$bleu-clair));
     }
     &__gout {
-        background: -webkit-gradient( linear, left top, right bottom, color-stop(0.2,$vertfoncer), color-stop(1,$vertclair));
-        background: -ms-gradient( linear, left top, right bottom, color-stop(0.2,$vertfoncer), color-stop(1,$vertclair));
+        background: -webkit-gradient( linear, left top, right bottom, color-stop(0.2,$vert-foncer), color-stop(1,$vert-clair));
+        background: -ms-gradient( linear, left top, right bottom, color-stop(0.2,$vert-foncer), color-stop(1,$vert-clair));
     }
 }
